@@ -8,6 +8,7 @@ import { strapiBaseUrl } from '../config.json';
 import { getData as getGlobalData } from '../adapters/strapi.adapter';
 
 const Blog = ({ Component, pageProps }) => {
+    console.log('_app', pageProps);
     const { global } = pageProps;
     const { defaultSeo } = global;
     const AppContext = createContext({});
