@@ -1,0 +1,25 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "Simple blog with next.js and strapi CMS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarkoCvrljak/Blog-app.git"
+  },
+  "keywords": [
+    "blog",
+    "next.js",
+    "strapi",
+    "cmgc"
+  ],
+  "author": "Marko Čvrljak",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MarkoCvrljak/Blog-app/issues"
+  },
+  "homepage": "https://github.com/MarkoCvrljak/Blog-app#readme"
+}
