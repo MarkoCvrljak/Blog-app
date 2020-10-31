@@ -3,11 +3,11 @@ import React, { createContext } from 'react';
 import PropTypes from 'prop-types';
 import Head from 'next/head';
 
-import { strapiUrl } from '../config.json';
+import { strapiBaseUrl } from '../config.json';
 
-import getGlobals from '../adapters/strapi.adapter';
+import { getData as getGlobalData } from '../adapters/strapi.adapter';
 
-const MyApp = ({ Component, pageProps }) => {
+const Blog = ({ Component, pageProps }) => {
     const { global } = pageProps;
     const { defaultSeo } = global;
     const AppContext = createContext({});
@@ -26,14 +26,14 @@ const MyApp = ({ Component, pageProps }) => {
     );
 };
 
-MyApp.getInitialProps = async () => {
-    const global = await getGlobals(`${strapiUrl}/global`);
+Blog.getInitialProps = async () => {
+    const global = await getGlobalData(`${strapiBaseUrl}/global`);
     return { pageProps: { global } };
 };
 
-MyApp.propTypes = {
+Blog.propTypes = {
     Component: PropTypes.func,
     pageProps: PropTypes.object,
 };
 
-export default MyApp;
+export default Blog;

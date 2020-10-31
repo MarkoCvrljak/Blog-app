@@ -1,6 +1,4 @@
-const getGlobals = async (path) => {
-    const response = (await fetch(path)).json();
+export const getData = async (apiUrl) => {
+    const response = (await fetch(apiUrl)).json();
     return response;
 };
-
-export default getGlobals;
