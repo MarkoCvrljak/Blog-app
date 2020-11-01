@@ -3,6 +3,8 @@ import React, { createContext } from 'react';
 import PropTypes from 'prop-types';
 import Head from 'next/head';
 
+import '../globalStyle.css';
+
 import { strapiBaseUrl } from '../config.json';
 
 import { getBlogData } from '../adapters/strapi.adapter';

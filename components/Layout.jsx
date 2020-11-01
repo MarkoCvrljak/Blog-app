@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import Navigation from './Navigation';
+
 const Layout = ({ children, categories }) => (
     <>
-        {categories.map(cat => cat.name)}
+        <Navigation categories={categories} />
         {children}
     </>
 );

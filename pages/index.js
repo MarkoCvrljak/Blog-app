@@ -32,7 +32,7 @@ export const getStaticProps = async () => {
 
 Home.propTypes = {
     homepage: PropTypes.object,
-    categories: PropTypes.object,
+    categories: PropTypes.array,
 };
 
 export default Home;
