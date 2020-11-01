@@ -5,17 +5,20 @@ import Head from 'next/head';
 
 import { strapiBaseUrl } from '../config.json';
 
-import { getData as getGlobalData } from '../adapters/strapi.adapter';
+import { getBlogData } from '../adapters/strapi.adapter';
 
 const Blog = ({ Component, pageProps }) => {
     console.log('_app', pageProps);
+
     const { global } = pageProps;
     const { defaultSeo } = global;
+
     const AppContext = createContext({});
 
     return (
         <>
             <Head>
+                <link rel="favicon" type="image/png" href={`${strapiBaseUrl}${global.favicon.url}`} />
                 <title>{defaultSeo.metaTitle}</title>
                 <meta name="description" content={defaultSeo.metaDescription} />
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
@@ -28,7 +31,7 @@ const Blog = ({ Component, pageProps }) => {
 };
 
 Blog.getInitialProps = async () => {
-    const global = await getGlobalData(`${strapiBaseUrl}/global`);
+    const global = await getBlogData(`${strapiBaseUrl}/global`);
     return { pageProps: { global } };
 };
 
