@@ -1,13 +1,12 @@
-/* eslint-disable react/jsx-props-no-spreading */
 import React, { createContext } from 'react';
 import PropTypes from 'prop-types';
 import Head from 'next/head';
 
-import '../globalStyle.css';
-
 import { strapiBaseUrl } from '../config.json';
 
 import { getBlogData } from '../adapters/strapi.adapter';
+
+import '../globalStyle.css';
 
 const Blog = ({ Component, pageProps }) => {
     console.log('_app', pageProps);

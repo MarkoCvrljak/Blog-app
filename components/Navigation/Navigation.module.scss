@@ -1,0 +1,12 @@
+.mainNavigation {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+
+    .logo {
+        color: black;
+        font-size: 23px;
+        text-decoration: none;
+    }
+}

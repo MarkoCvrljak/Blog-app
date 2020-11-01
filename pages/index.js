@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Layout from '../components/Layout';
+import Layout from '../components/Layout/Layout';
 
 import { getBlogData } from '../adapters/strapi.adapter';
 
@@ -12,9 +12,7 @@ const Home = ({ homepage, categories }) => {
     return (
         <Layout categories={categories}>
             <div className="">
-                <div className="">
-                    <h1>{homepage.main.title}</h1>
-                </div>
+                <h1>{homepage.main.title}</h1>
             </div>
         </Layout>
     );

@@ -65,6 +65,7 @@ module.exports = {
         'jsx-a11y/no-noninteractive-tabindex': 'off',
         'import/named': 'off',
         'func-names': 'off',
+        'react/jsx-props-no-spreading': 'off',
         'max-len': [
             2,
             150,
