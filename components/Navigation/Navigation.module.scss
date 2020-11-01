@@ -1,12 +1,25 @@
-.mainNavigation {
+.mainNav {
     align-items: center;
     display: flex;
     justify-content: space-between;
-    padding: 15px 30px;
+    margin-bottom: 40px;
 
     .logo {
         color: black;
         font-size: 23px;
         text-decoration: none;
+    }
+
+    ul {
+        display: flex;
+
+        li {
+            margin-right: 33px;
+        }
+    }
+
+    .mainNavItemLink {
+        color: black;
+        text-transform: uppercase;
     }
 }

@@ -6,23 +6,21 @@ import styles from './Navigation.module.scss';
 
 const Navigation = ({ categories }) => {
     return (
-        <nav className={styles.mainNavigation} data-uk-navbar>
+        <nav className={styles.mainNav} data-uk-navbar>
             <Link href="/">
-                <a className={styles.logo}>Strapi Blog</a>
+                <a className={styles.logo}>DEVS Blog</a>
             </Link>
-            <div className="main-navigation-items-container">
-                <ul className="main-navigation-items">
-                    {categories.map((category) => {
-                        return (
-                            <li key={category.id} className="main-navigation-item">
-                                <Link as={`/category/${category.slug}`} href="/category/[id]">
-                                    <a className="main-navigation-item-link">{category.name}</a>
-                                </Link>
-                            </li>
-                        );
-                    })}
-                </ul>
-            </div>
+            <ul>
+                {categories.map((category) => {
+                    return (
+                        <li key={category.id}>
+                            <Link as={`/category/${category.slug}`} href="/category/[id]">
+                                <a className={styles.mainNavItemLink}>{category.name}</a>
+                            </Link>
+                        </li>
+                    );
+                })}
+            </ul>
         </nav>
     );
 };
